@@ -15,6 +15,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .search-box input:focus{border-color:#2d6a9f}
 .search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#999;font-size:16px}
 .toc{margin:10px 12px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.toc-category{padding:10px 14px 6px;font-size:12px;color:#2d6a9f;font-weight:600;background:#f0f5fa;border-bottom:1px solid #e0e8f0}
+.toc-category:first-child{border-radius:10px 10px 0 0}
 .toc-item{display:flex;align-items:center;padding:13px 14px;border-bottom:1px solid #f0f0f0;text-decoration:none;color:#333;font-size:14px}
 .toc-item:last-child{border-bottom:none}
 .toc-item:active{background:#f0f5fa}
@@ -24,6 +26,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .doc-section{margin:10px 12px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
 .doc-header{padding:14px;background:#f8fafc;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;cursor:pointer;user-select:none}
 .doc-header h2{font-size:15px;font-weight:600;color:#1a3a5c;flex:1}
+.cat-tag{font-size:10px;background:#e8f0fe;color:#2d6a9f;padding:2px 6px;border-radius:3px;margin-right:6px;vertical-align:middle}
 .doc-arrow{color:#999;font-size:12px;transition:transform 0.3s;margin-left:8px}
 .doc-section.open .doc-arrow{transform:rotate(180deg)}
 .doc-body{padding:0 14px;max-height:0;overflow:hidden;transition:max-height 0.4s ease}
@@ -38,7 +41,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <body>
 <div class="header"><h1>天星公司正式制度</h1><div class="sub">沈阳天星试验仪器股份有限公司</div></div>
 <div class="search-box"><span class="search-icon">&#128269;</span><input type="text" id="search" placeholder="搜索制度内容..." oninput="doSearch()"></div>
-<div class="toc" id="toc"><a href="#doc0" class="toc-item" onclick="toggleDoc('doc0')">
+<div class="toc" id="toc"><div class="toc-category">人事制度</div>
+<a href="#doc0" class="toc-item" onclick="toggleDoc('doc0')">
                 <span class="toc-num">1</span>
                 <span class="toc-title">关于制度正式颁布实施的通知</span>
                 <span class="toc-arrow">&#9662;</span>
@@ -62,11 +66,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
                 <span class="toc-num">5</span>
                 <span class="toc-title">退休返聘人员管理制度2025122504</span>
                 <span class="toc-arrow">&#9662;</span>
-            </a></div>
+            </a>
+<div class="toc-category">车辆管理制度</div>
+<a href="#doc5" class="toc-item" onclick="toggleDoc('doc5')">
+                <span class="toc-num">6</span>
+                <span class="toc-title">车辆管理规定</span>
+                <span class="toc-arrow">&#9662;</span>
+            </a>
+</div>
 <div id="noResults" class="no-results">未找到匹配内容</div>
 <div id="content"><div class="doc-section" id="doc0">
             <div class="doc-header" onclick="toggleDoc('doc0')">
-                <h2>关于制度正式颁布实施的通知</h2>
+                <h2><span class="cat-tag">人事制度</span> 关于制度正式颁布实施的通知</h2>
                 <span class="doc-arrow">&#9662;</span>
             </div>
             <div class="doc-body"><p>关于制度正式颁布实施的通知 公司全体员工： 为完善公司管理体系，保障公司与员工的合法权益，公司根据《中华人民共和国劳动合同法》等相关规定，已对涉及员工切身利益的人事管理制度进行了系统修订。</p>
@@ -82,7 +93,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
         </div>
 <div class="doc-section" id="doc1">
             <div class="doc-header" onclick="toggleDoc('doc1')">
-                <h2>员工关系管理制度2025122501</h2>
+                <h2><span class="cat-tag">人事制度</span> 员工关系管理制度2025122501</h2>
                 <span class="doc-arrow">&#9662;</span>
             </div>
             <div class="doc-body"><p>天星公司员工关系管理制度 一、总则 第一条 目的与依据：为规范公司人力资源管理，保障公司与员工合法权益，根据《《中华人民共和国劳动合同法》等法律法规，结合公司实际情况，制定本制度。</p>
@@ -147,7 +158,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
         </div>
 <div class="doc-section" id="doc2">
             <div class="doc-header" onclick="toggleDoc('doc2')">
-                <h2>考勤管理制度25122502</h2>
+                <h2><span class="cat-tag">人事制度</span> 考勤管理制度25122502</h2>
                 <span class="doc-arrow">&#9662;</span>
             </div>
             <div class="doc-body"><p>天星公司考勤管理制度 一、 总则 1、员工考勤是员工计发工资的依据。</p>
@@ -208,7 +219,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
         </div>
 <div class="doc-section" id="doc3">
             <div class="doc-header" onclick="toggleDoc('doc3')">
-                <h2>薪酬福利管理制度2025122503</h2>
+                <h2><span class="cat-tag">人事制度</span> 薪酬福利管理制度2025122503</h2>
                 <span class="doc-arrow">&#9662;</span>
             </div>
             <div class="doc-body"><p>天星公司薪酬管理制度 一、目的 为完善公司的薪资管理制度，实现规范化管理，特制订本管理规定。</p>
@@ -265,7 +276,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
         </div>
 <div class="doc-section" id="doc4">
             <div class="doc-header" onclick="toggleDoc('doc4')">
-                <h2>退休返聘人员管理制度2025122504</h2>
+                <h2><span class="cat-tag">人事制度</span> 退休返聘人员管理制度2025122504</h2>
                 <span class="doc-arrow">&#9662;</span>
             </div>
             <div class="doc-body"><p>天星公司退休返聘人员管理规定 一、目的 为加强对退休返聘人员的管理，保障双方合法权益，根据《中华人民共和国民法典》及相关法律法规，特制订本规定。</p>
@@ -285,8 +296,87 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <p>七、附则 本制度由综合管理部负责解释与修订，经总经理批准后生效和执行，原《退休返聘人员管理》（综管字第241122）废止。</p>
 <p>沈阳天星试验仪器股份有限公司 2025年12月25日 主题词：退休 返聘 报 送： 总经理 发至： 公司各部门 起 草： 综合管理部 签批： 时间： 沈阳天星试验仪器股份有限公司 综管字第2025122504 民主协商通过版。</p>
 </div>
-        </div></div>
-<div class="footer">更新日期：2026年06月16日 &nbsp;|&nbsp; 如有疑问请联系综合管理部</div>
+        </div>
+<div class="doc-section" id="doc5">
+            <div class="doc-header" onclick="toggleDoc('doc5')">
+                <h2><span class="cat-tag">车辆管理制度</span> 车辆管理规定</h2>
+                <span class="doc-arrow">&#9662;</span>
+            </div>
+            <div class="doc-body"><p>车辆管理制度
+一、目的
+为加强公司车辆管理，确保车辆安全、良好运行，规范车辆使用、维修保养、事故处理、交接、加油充电等行为，特制定本制度。</p>
+<p>二、适用范围
+本制度适用于公司所属车辆、私车公用车辆。</p>
+<p>三、职责分工
+1. 综合部：负责车辆档案管理、保养提示、指定维修厂、油卡管理、费用审核、每季度外观检查、制度解释。</p>
+<p>2. 车辆使用人：一般要求实际驾龄一年以上，负责接车、交车检查，保持车内外清洁，经常检查油、水、液情况，填写相关记录，发现问题及时处理。</p>
+<p>3. 采购员：负责加油卡充值及发票开具。</p>
+<p>4. 总经理：负责超预算维修费用及特殊事项审批。</p>
+<p>四、车辆使用人分类
+1. 固定使用人：车辆固定专人使用，如辽ADS0392。</p>
+<p>2. 常用使用人：经常使用特定车辆的人员，如比亚迪元辽AD25653的常用使用人为段宏斌、王国志。</p>
+<p>3. 不常用使用人：偶尔使用车辆的人员，如聂欣华、穆晓华等。</p>
+<p>4. 办事处车辆使用人：销售、售后人员在办事处周边或巡检时使用车辆的人员。</p>
+<p>五、维修保养管理
+1. 车辆常用使用人、固定使用人和办事处车辆当前使用人到公司指定的汽修厂进行车辆维修保养。</p>
+<p>2. 保养公里数参照标准保养周期的100%-120%执行（如比亚迪秦辽AF65163标准周期5000公里，可按5000-6000公里保养）。</p>
+<p>3. 维修保养前需联系综合部了解注意事项，维修保养后，将情况反馈给综合部，综合部及时更新维修保养记录；维修保养项目和费用经综合部确认后再报销。</p>
+<p>4. 行驶中发生故障或事故时，应告知综合部，如需维修，经沟通确认后去往指定维修厂；情况不允许的可就近维修。</p>
+<p>5. 更换的关键部件需带回公司，并对维修保养质量及时反馈。</p>
+<p>6. 事故、故障维修费用和计划外保养项目费用预估超出200元时，须请示总经理。</p>
+<p>六、车辆使用记录与交接管理
+1.车辆使用记录填写要求
+1）固定使用人、常用使用人：使用车辆可不填写《车辆使用记录》，但需对车辆状况负责。</p>
+<p>2）不常用使用人、办事处车辆使用人：每次交接时须填写《车辆使用记录》。</p>
+<p>2.交接车管理
+1）交车要求（不常用使用人、办事处车辆使用人）：交车时拍摄车辆四边四角共8张照片（前后左右四个方向+左前、右前、左后、右后），发至车辆使用群。</p>
+<p>2）接车要求（常用使用人或其他办事处车辆使用人）：比对前使用人的交车照片查看外观，确认无异常群内回复“接车正常”。</p>
+<p>如有异常，重新拍摄8张照片并说明异常位置。</p>
+<p>七、加油与充电管理
+1. 公司车辆统一使用中石化、中石油加油卡，未使用公司油卡加油不予报销。</p>
+<p>具体按综管字第241202号《油卡管理规定》执行。</p>
+<p>2.每次加油/充电需拍摄里程数、加油升数/充电度数、金额、油卡余额，保存小票，填写《加油/充电登记卡》，内容须完整。</p>
+<p>3.油电混合车辆以优先保证工作任务和效率为前提，选择加油或充电。</p>
+<p>4.相关费用按公司报销制度执行。</p>
+<p>八、私车公用管理规定
+1.私车公用的申请、审核及报销：在使用公司车辆不便时，使用人需要在出差前填写《出差单》并经领导审批，沈阳市内九区需要部门负责人审批，沈阳郊县或外市需要总经理审批；返回后凭出差前后车辆里程数照片到综合部核销，然后按报销程序报销私车公用补贴；
+2.私车公用补贴的报销标准和计算方式
+1）综合补贴计算方法：补贴费＝里程数*每公里补贴标准。</p>
+<p>每公里补贴标准为：沈阳市内1元，沈阳郊县或外市0.8元，此项补贴已包含车辆保养费、保险费及车辆磨损折旧费用，公司不再额外承担。</p>
+<p>2）私车公用期间产生的停车费、路桥费据实凭发票报销，补贴费用按核定金额后附替票报销。</p>
+<p>3）里程数计算标准：以实际记录的里程数为基准，并以百度地图的驾车模式自动计算出行车起止地点的里程数为参考，如超出参考数10%以上的，需报销单后面附情况说明。</p>
+<p>3.车辆要求：公用的私车，须是自家车辆，应确保驾驶证、车辆行驶证、车辆保险（交强险、车损险、第三者责任险和驾乘险）等相关手续齐全并始终在有效期限内。</p>
+<p>九、事故处理及责任
+1.事故处理流程
+1）救死扶伤，避免二次事故。</p>
+<p>2）报告公司综合部，根据预计的事故责任和车损金额决定是否报险。</p>
+<p>3）报警、报险。</p>
+<p>4）拍照（车牌、标线、碰撞部位）。</p>
+<p>5）避免不必要的拥堵。</p>
+<p>6）确认维修地点和理赔方式，小事故可现金付赔或索赔。</p>
+<p>2.公司车辆责任划分
+1）本方责任事故：驾驶员承担车损修复金额的10%作为罚款，最高不超过500元。</p>
+<p>2）发现未报告的车损：车辆负责人承担车损修复金额的50%作为罚款，最高不超过500元。</p>
+<p>3）违规使用公司车辆发生事故：由驾驶人承担全部事故损失。</p>
+<p>4）其他情况：驾驶员不承担损失和罚款。</p>
+<p>3.私车公用责任划分：
+1）本方责任小事故(小事故指不走保险的事故)，公司承担双方车损金额的100%;
+2）对方责任小事故，公司额外承担本方车损金额的15%作为补偿；
+3）中等以上事故，公司额外承担本方车损金额的15%作为补偿；
+4）较大事故，公司承担保险理赔后本方的全部责任，违规用车和严重违法驾驶的除外。</p>
+<p>十、附则
+1. 本制度自发布之日起执行，原《公司车辆维修保养管理制度》、《私车公用管理规定》、《关于车辆事故处理的补充规定》同时废止。</p>
+<p>2. 本制度解释权归公司综合部。</p>
+<p>3. 附件：《车辆使用记录》、《加油/充电登记卡》
+沈阳天星试验仪器股份有限公司  
+                             2026年5月19日
+ 主题词：车辆管理 保养 交接
+ 报  送： 总经理                发至： 公司各部门
+ 起  草： 综合部                签批：            时间：。</p>
+</div>
+        </div>
+</div>
+<div class="footer">更新日期：2026年06月16日 &nbsp;|&nbsp; 共 6 项制度 &nbsp;|&nbsp; 如有疑问请联系综合管理部</div>
 <script>
 function toggleDoc(d){var e=document.getElementById(d);e.classList.toggle('open')}
 function doSearch(){var q=document.getElementById('search').value.trim().toLowerCase();var s=document.querySelectorAll('.doc-section');var t=document.getElementById('toc');var n=document.getElementById('noResults');var c=document.getElementById('content');if(q.length===0){t.style.display='';n.style.display='none';c.style.display='';s.forEach(function(e){e.style.display='';e.classList.remove('open')});document.querySelectorAll('.highlight').forEach(function(h){h.outerHTML=h.innerHTML});return}t.style.display='none';var f=0;s.forEach(function(e){var b=e.querySelector('.doc-body');var tx=b.textContent.toLowerCase();if(tx.indexOf(q)>=0){e.style.display='';e.classList.add('open');f++;var html=b.innerHTML;html=html.replace(/<span class="highlight">([^<]*)<\/span>/g,'$1');var rx=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');html=html.replace(rx,'<span class="highlight">$1</span>');b.innerHTML=html}else{e.style.display='none';e.classList.remove('open')}});c.style.display=f>0?'':'none';n.style.display=f>0?'none':'';if(f===0){n.innerHTML='未找到包含"<b>'+q+'</b>"的内容'}}
